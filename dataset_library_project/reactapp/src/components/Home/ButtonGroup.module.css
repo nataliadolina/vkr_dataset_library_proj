@@ -1,0 +1,12 @@
+.buttonGroup {
+    display: flex;
+    gap: 16px;
+    color: var(--sds-color-text-neutral-default);
+    font: var(--sds-typography-body-font-weight-regular) var(--sds-typography-body-size-medium) / 1 var(--sds-typography-body-font-family);
+  }
+  
+  @media (max-width: 991px) {
+    .buttonGroup {
+      flex-wrap: wrap;
+    }
+  }

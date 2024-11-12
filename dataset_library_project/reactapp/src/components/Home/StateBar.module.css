@@ -1,0 +1,26 @@
+.stateBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1px 72px;
+    width: 100%;
+  }
+  
+  .tagToggleGroup {
+    display: flex;
+    gap: 13px;
+    flex-wrap: wrap;
+  }
+  
+  .settingsIcon {
+    width: 32px;
+    height: 32px;
+  }
+  
+  @media (max-width: 991px) {
+    .stateBar {
+      padding: 1px 20px;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  }

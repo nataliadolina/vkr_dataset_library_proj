@@ -1,0 +1,13 @@
+.datasetList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 21px;
+    padding: 17px 69px 6px;
+    width: 100%;
+  }
+  
+  @media (max-width: 991px) {
+    .datasetList {
+      padding: 17px 20px 6px;
+    }
+  }

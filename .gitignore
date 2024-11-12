@@ -1,0 +1,10 @@
+
+/.idea
+/.venv/
+/dataset_library_project/.vscode/
+/dataset_library_project/dataset_library/migrations/
+/dataset_library_project/db.sqlite3
+/dataset_library_project/dataset_library/__pycache__
+/dataset_library_project/dataset_library_project/__pycache__
+/dataset_library_project/node_modules
+/dataset_library_project/media/data/

@@ -1,0 +1,29 @@
+.userProfile {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+  
+  .avatar {
+    border-radius: 50%;
+    background-color: #2c2c2c;
+    color: var(--sds-color-text-brand-on-brand);
+    width: 69px;
+    height: 69px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: var(--sds-typography-subheading-font-weight) var(--sds-typography-subheading-size-medium) / 1.2 var(--sds-typography-subheading-font-family);
+  }
+  
+  .info {
+    font: var(--sds-typography-body-size-medium) / 1.4 var(--sds-typography-body-font-family);
+    color:#2c2c2c;
+    text-align: left
+  }
+  
+  .name {
+    color: var(--sds-color-text-default-secondary);
+    font-weight: var(--sds-typography-body-font-weight-strong);
+    text-align: left
+  }
