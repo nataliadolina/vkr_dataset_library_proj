@@ -1,9 +1,9 @@
 import React from 'react';
 import DatasetCard from './DatasetCard';
 import styles from './DatasetList.module.css';
-import axios from "axios";
-import {useEffect, useState} from "react";
-import {API_URL} from "./../../index";
+import {useEffect} from "react";
+import { useSelector, useDispatch } from 'react-redux';
+import {getDatasets} from '../../actions/dataActions';
 
 const DatasetList = () => {
   const datasetImg = [
@@ -15,27 +15,17 @@ const DatasetList = () => {
     { image: 'https://cdn.builder.io/api/v1/image/assets/TEMP/5144a761f8e027fb041e6003205877bf8003dd678403b568706d64e94262fbd7?placeholderIfAbsent=true&apiKey=61f44cf9345a45009a34f39150f63290', title: 'Животные Африки датасет' }
   ];
 
-  const [datasets, setDatasets] = useState([])
+  const datasetsList = useSelector(state => state.datasets.datasetsList); 
+  //  Получаем  функцию  `dispatch`  для  отправки  действий
+  const dispatch = useDispatch(); 
 
-  const getDatasets = () => {
-        axios.get(API_URL).then(function(response) {
-            setDatasets(response.data)
-          }).catch((err) => {
-            console.log(err)
-        });
-    }
-
-  const resetState = () => {
-        getDatasets();
-    }
-
-    useEffect(() => {
-        getDatasets()
-    })
+  useEffect(() => {
+    dispatch(getDatasets());
+  }, [])
 
   return (
     <section className={styles.datasetList}>
-      {datasets.map((dataset, index) => (
+      {datasetsList.map((dataset, index) => (
         <DatasetCard key={dataset.id} image={datasetImg[index % datasetImg.length].image} name={dataset.name}
          description={dataset.description} status={dataset.status_name} substatuses={dataset.substatus_name}/>
       ))}
