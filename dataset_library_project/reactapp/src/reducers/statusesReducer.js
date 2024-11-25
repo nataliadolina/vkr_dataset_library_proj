@@ -16,6 +16,7 @@ const statusesReducer = (state = initialState, action) => {
                 return {...state, activeStatuses: state.activeStatuses.filter(item => item !== action.payload)}
             }
             else{
+                console.log([...state.activeStatuses, action.payload])
                 return  {...state, activeStatuses: [...state.activeStatuses, action.payload]}
             }
 

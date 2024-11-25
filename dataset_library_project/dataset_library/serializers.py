@@ -21,4 +21,4 @@ class DatasetSerializer(serializers.Serializer):
 class StatusesSerializer(serializers.ModelSerializer):
     class Meta:
         model = Status
-        fields = ('name', 'description')
+        fields = ('id', 'name', 'description')

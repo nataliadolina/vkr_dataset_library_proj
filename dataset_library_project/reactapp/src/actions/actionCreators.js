@@ -1,7 +1,7 @@
-const setActiveStatus = (status_name) => {
+const setActiveStatus = (statuses) => {
     return {
       type: 'statuses/SET_ACTIVE_STATUS',
-      payload: status_name
+      payload: statuses
     };
   }
 export default setActiveStatus;
